@@ -50,8 +50,48 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzMaisBuzz(ret) {
+  for (let i = 0; i < ret.length; i += 1) {
+    if ((ret[i] % 3) === 0 && (ret[i] % 5) === 0 && Number.isInteger(ret[i])) {
+      ret[i] = 'fizzBuzz';
+    }
+  }
+  return ret;
+}
+
+function buzz(ret) {
+  for (let i = 0; i < ret.length; i += 1) {
+    if ((ret[i] % 5) === 0 && (ret[i] % 3) !== 0 && Number.isInteger(ret[i])) {
+      ret[i] = 'buzz';
+    }
+  }
+  return ret;
+}
+
+function bug(ret) {
+  for (let i = 0; i < ret.length; i += 1) {
+    if ((ret[i] % 3) !== 0 && (ret[i] % 5) !== 0 && Number.isInteger(ret[i])) {
+      ret[i] = 'bug!';
+    }
+  }
+  return ret;
+}
+
+function fizz(ret) {
+  for (let i = 0; i < ret.length; i += 1) {
+    if ((ret[i] % 3) === 0 && (ret[i] % 5) !== 0 && Number.isInteger(ret[i])) {
+      ret[i] = 'fizz';
+    }
+  }
+  return ret;
+}
+
+function fizzBuzz(numArray) {
+  let divAll = fizzMaisBuzz(numArray);
+  let div3 = fizz(divAll);
+  let div5 = buzz(div3);
+  let bu = bug(div5);
+  return bu;
 }
 
 // Desafio 9
