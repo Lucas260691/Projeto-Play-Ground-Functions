@@ -15,8 +15,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStr) {
+  return `${arrayStr[arrayStr.length - 1]}, ${arrayStr[0]}`;
 }
 
 // Desafio 5
